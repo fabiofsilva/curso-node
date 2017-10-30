@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    	<meta charset="utf-8">
+    	<title>Notícias</title>
+    </head>
+	<body>
+		<h1>Notícias</h1>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Título</th>
+					<th>Notícia</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% for(var i=0; i < noticias.length; i++) {%>
+				<tr>
+					<td><%= noticias[i].titulo %></td>
+					<td><%= noticias[i].noticia %></td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</body>
+</html>
