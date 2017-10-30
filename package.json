@@ -2,13 +2,14 @@
   "name": "portal_noticias",
   "version": "1.0.0",
   "description": "Site de noticias",
-  "main": "noticias.js",
+  "main": "apps.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Fabio Ferreira da Silva",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "mysql": "^2.15.0"

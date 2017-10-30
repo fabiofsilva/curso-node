@@ -1,4 +1,10 @@
 // Arquivo de configuração da aplicação
+var result = require('dotenv').config();
+
+if (result.error) {
+  throw result.error;
+}
+
 var express = require('express');
 var app = express();
 // Para usar extensão ejs nos templates, basta descomentar a linha abaixo
