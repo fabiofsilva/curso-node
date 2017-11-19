@@ -6,6 +6,8 @@ if (result.error) {
 }
 
 var express = require('express');
+var consign = require('consign');
+
 var app = express();
 // Para usar extensão ejs nos templates, basta descomentar a linha abaixo
 // app.set('view engine', 'ejs');
@@ -17,5 +19,11 @@ app.set('view engine', 'html');
    por isso a inclusão de "./".
 */
 app.set('views', './app/views');
+
+consign()
+	.include('app/routes')
+	.then('config/dbConnection.js')
+	.then('app/models')
+	.into(app);
 
 module.exports = app;
