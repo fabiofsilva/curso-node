@@ -7,6 +7,8 @@ if (result.error) {
 
 var express = require('express');
 var consign = require('consign');
+var bodyParser = require('body-parser');
+var expressValidator = require('express-validator');
 
 var app = express();
 // Para usar extensão ejs nos templates, basta descomentar a linha abaixo
@@ -20,10 +22,15 @@ app.set('view engine', 'html');
 */
 app.set('views', './app/views');
 
+// Inclusão de middlewares
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(expressValidator());
+
 consign()
 	.include('app/routes')
 	.then('config/dbConnection.js')
 	.then('app/models')
+    .then('app/controllers')
 	.into(app);
 
 module.exports = app;

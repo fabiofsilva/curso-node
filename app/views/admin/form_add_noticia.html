@@ -1,7 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulário de cadastro de notícia</title>
+    </head>
 	<body>
-		<h1>Adicionar Not&iacute;cia</h1>
-		<form></form>
+		<h1>Adicionar notícia</h1>
+        <% if (validacao) { %>
+            <ul>
+                <% for (var i=0; i < validacao.length; i++) { %>
+                    <li><%= validacao[i].msg %></li>
+                <% } %>
+            </ul>
+        <% } %>
+
+		<form action='/noticias/salvar' method="post">
+            <label>Título</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Título da notícia" value="<%= noticia.titulo %>">
+            <br>
+            <label>Resumo</label>
+            <input type="text" id="resumo" name="resumo" placeholder="Resumo da notícia" value="<%= noticia.resumo %>">
+            <br>
+            <label>Nome autor</label>
+            <input type="text" id="autor" name="autor" placeholder="Autor da notícia" value="<%= noticia.autor %>">
+            <br>
+            <label>Data dos fatos</label>
+            <input type="date" id="data_noticia" name="data_noticia" value="<%= noticia.data_noticia %>">
+            <br>                                    
+            <label>Notícia</label>
+            <textarea id="noticia" name="noticia" rows="5" cols="30"><%= noticia.noticia %></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
 	</body>
 </html>

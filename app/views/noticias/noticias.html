@@ -9,15 +9,15 @@
 		<table border="1">
 			<thead>
 				<tr>
-					<th>ID</th>
+					<th>Data da notícia</th>
 					<th>Título</th>
 				</tr>
 			</thead>
 			<tbody>
 				<% for(var i=0; i < noticias.length; i++) {%>
 				<tr>
-					<td><%= noticias[i].id %></td>
-					<td><%= noticias[i].titulo %></td>
+					<td><%= noticias[i].data_noticia %></td>
+                    <td><a href="/noticia?id=<%= noticias[i].id %>"><%= noticias[i].titulo%></a></td>
 				</tr>
 				<% } %>
 			</tbody>
