@@ -3,11 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 
-		<title>Portal de notícias</title>
+		<title>Página não encontrada</title>
 		
-		<!-- JQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	
@@ -43,26 +40,13 @@
 
 
 	    <div class="container">
-	    	<% if(noticias.length > 0) { %>
-	    		<% for(var i = 0; i < noticias.length; i++) { %>
-			    	<div class="row">
-			    		<div class="col-md-12">
-			    			<div class="noticia_wrapper">
-				    			<span class="noticia_autor"<%= noticias[i].autor %></span>
-				    			<a href="noticia?id=<%= noticias[i].id %>" class="noticia_titulo"><%= noticias[i].titulo %></a>
-				    			<span class="noticia_data"><%= noticias[i].data_noticia %></span>
-				    			<br />
-				    			<p class="noticia_resumo">
-				    				<%= noticias[i].resumo %>
-				    			</p>
-				    		</div>
-				    	</div>
-					</div>
-				<% } %>
-			<% } %>			
+	    	<div class="row">
+	    		<h2>Página não encontrada</h2>
+	    		
+	    		<p>Desculpe, mas a página requisitada não foi encontrada.</p>
+	    	</div>
+
 	    </div>
-	
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	
 	</body>
 </html>
