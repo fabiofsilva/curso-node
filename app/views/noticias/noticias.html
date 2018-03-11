@@ -1,11 +1,11 @@
 {% extends "base_site.html" %}
 
 {% block content %}
-	{% for noticia in noticias %}
-		<div class="row">
-			<div class="col-md-12">
-				{% include "noticias/noticia_detalhe.html" %}
-	    	</div>
-		</div>
-	{% endfor %}
+    {% for noticia in noticias %}
+        <div class="row">
+            <div class="col-md-12">
+                {% include "noticias/noticia_detalhe.html" %}
+            </div>
+        </div>
+    {% endfor %}
 {% endblock %}
