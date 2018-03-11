@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		{% block head %}
+			<meta charset="UTF-8">
+
+			<title>{% block title %}{% endblock %}</title>
+			
+			<!-- JQuery -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+
+			<!-- bootstrap - link cdn -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+			<!-- incluindo css -->
+			<link href="css/style.css" rel="stylesheet">
+
+			<!-- favicon -->
+			<link rel="shortcut icon" href="images/favicon.ico" />
+		{% endblock %}
+	</head>
+
+	<body>
+		{% block nav_global %}
+			<nav class="navbar navbar-default navbar-static-top">{% block nav_items %}{% endblock %}</nav>
+		{% endblock %}
+
+	    <div class="container">{% block content %}{% endblock %}</div>
+	    {% block footer %}
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		{% endblock %}
+	</body>
+</html>
